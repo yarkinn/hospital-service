@@ -8,7 +8,7 @@ public class PatientCareTechnician implements Employee{
     }
     @Override
     public int getId() {
-        return id;
+        return id *1;
     }
 
     @Override
