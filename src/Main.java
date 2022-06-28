@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,17 +8,21 @@ public class Main {
         System.out.println("Welcome to Hospital Employee Management System");
         boolean stop = false;
         while(!stop){
-            System.out.println("Press 1 to add new employee\n Press 2 to remove employee\nPress 3 to list employees");
+            System.out.println("Press 1 to add new employee\nPress 2 to remove employee\nPress 3 to list employees");
             System.out.print( "Your choice: ");
             Scanner in = new Scanner(System.in);
             int choice = in.nextInt();
             System.out.println();
             if( choice == 1){
+
                 System.out.print("Id of the employee: ");
                 int id = in.nextInt();
+                System.out.println( "Employee types to choose from: doctor, nurse, pct, pt, sw");
                 System.out.print("Type of employee: ");
                 String type = in.next();
-                employees.addEmployee(id,type);
+                System.out.print("Name of employee: ");
+                String name = in.next();
+                employees.addEmployee(id,type,name);
             }
             else if( choice == 2){
                 System.out.print("Id of the employee: ");

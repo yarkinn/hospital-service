@@ -19,29 +19,29 @@ public class EmployeeList {
         return false;
 
     }
-    public void addEmployee( int id, String type){
+    public void addEmployee( int id, String type,String name){
         if( employeeExists(id)){
             System.out.println("Employee already exists");
 
         }
         else{
             if(type.compareTo("doctor") == 0){
-                employees.add(new Doctor(id));
+                employees.add(new Doctor(id,name));
             }
             else if(type.compareTo("nurse") == 0){
-                employees.add( new Nurse(id));
+                employees.add( new Nurse(id,name));
 
             }
             else if(type.compareTo("pct") == 0){
-                employees.add( new PatientCareTechnician(id));
+                employees.add( new PatientCareTechnician(id,name));
 
             }
             else if(type.compareTo("pt") == 0){
-                employees.add( new PhysicalTechnician(id));
+                employees.add( new PhysicalTechnician(id,name));
 
             }
             else if(type.compareTo("sw") == 0){
-                employees.add( new SocialWorker(id));
+                employees.add( new SocialWorker(id,name));
 
             }
             else{
@@ -67,7 +67,7 @@ public class EmployeeList {
     public void listEmployees(){
         for (Employee e:
              employees) {
-            System.out.println( "Id: " + e.getId() + "\nSalary: " + e.getSalary() + "\nWorkingHours: " + e.getWorkingHours() );
+            System.out.println( "Id: " + e.getId() +"\nName: " + e.getName() + "\nSalary: " + e.getSalary() + "\nWorkingHours: " + e.getWorkingHours() );
             System.out.println();
         }
 
