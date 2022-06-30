@@ -17,6 +17,10 @@ public class Main {
 
                 System.out.print("Id of the employee: ");
                 int id = in.nextInt();
+                while( employees.employeeExists(id)){
+                    System.out.print("Employee with this id already exists, choose a different id: ");
+                    id = in.nextInt();
+                }
                 System.out.println( "Employee types to choose from: doctor, nurse, pct, pt, sw");
                 System.out.print("Type of employee: ");
                 String type = in.next();

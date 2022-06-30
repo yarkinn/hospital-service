@@ -20,11 +20,8 @@ public class EmployeeList {
 
     }
     public void addEmployee( int id, String type,String name){
-        if( employeeExists(id)){
-            System.out.println("Employee already exists");
+        if( !employeeExists(id)){
 
-        }
-        else{
             if(type.compareTo("doctor") == 0){
                 employees.add(new Doctor(id,name));
             }
