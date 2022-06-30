@@ -1,9 +1,11 @@
 public class PatientCareTechnician extends Employee{
 
-    public PatientCareTechnician(int id,String name){
-        this.setName(name);
-        this.setId(id);
-        this.setWorkingHours(40);
-        this.setSalary(8000);
+    public PatientCareTechnician(int id,int salary,int workingHours,String name){
+        super(id, salary, workingHours, name);
+    }
+
+    @Override
+    public String getJob() {
+        return "pct";
     }
 }

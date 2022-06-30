@@ -1,11 +1,14 @@
 public class Doctor extends Employee{
 
 
-    public Doctor(int id,String name){
-        this.setName(name);
-        this.setId(id);
-        this.setWorkingHours(60);
-        this.setSalary(10000);
+    public Doctor(int id,int salary,int workingHours,String name){
+        super(id,salary,workingHours,name);
     }
+
+    @Override
+    public String getJob() {
+        return "doctor";
+    }
+
 
 }

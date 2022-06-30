@@ -2,15 +2,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeList {
-    public EmployeeList(){
-        this.employees = new ArrayList<>();
-    }
+
 
     private List<Employee> employees;
 
+    public EmployeeList( List<Employee> employeeList){
+        this.employees = employeeList;
+    }
+
     public boolean employeeExists(int id){
-        for (Employee i:
-             employees) {
+        for (Employee i: employees) {
             if( i.getId() == id){
                 return true;
             }
@@ -19,26 +20,26 @@ public class EmployeeList {
         return false;
 
     }
-    public void addEmployee( int id, String type,String name){
+    public void addEmployee( int id, String type,String name,int salary,int workingHours){
         if( !employeeExists(id)){
 
             if(type.compareTo("doctor") == 0){
-                employees.add(new Doctor(id,name));
+                employees.add(new Doctor(id,salary,workingHours,name));
             }
             else if(type.compareTo("nurse") == 0){
-                employees.add( new Nurse(id,name));
+                employees.add( new Nurse(id,salary,workingHours,name));
 
             }
             else if(type.compareTo("pct") == 0){
-                employees.add( new PatientCareTechnician(id,name));
+                employees.add( new PatientCareTechnician(id,salary,workingHours,name));
 
             }
             else if(type.compareTo("pt") == 0){
-                employees.add( new PhysicalTechnician(id,name));
+                employees.add( new PhysicalTechnician(id,salary,workingHours,name));
 
             }
             else if(type.compareTo("sw") == 0){
-                employees.add( new SocialWorker(id,name));
+                employees.add( new SocialWorker(id,salary,workingHours,name));
 
             }
             else{
@@ -64,7 +65,7 @@ public class EmployeeList {
     public void listEmployees(){
         for (Employee e:
              employees) {
-            System.out.println( "Id: " + e.getId() +"\nName: " + e.getName() + "\nSalary: " + e.getSalary() + "\nWorkingHours: " + e.getWorkingHours() );
+            System.out.println( "Id: " + e.getId() +"\nName: " + e.getName() +"\nJob: " + e.getJob() + "\nSalary: " + e.getSalary() + "\nWorkingHours: " + e.getWorkingHours() );
             System.out.println();
         }
 

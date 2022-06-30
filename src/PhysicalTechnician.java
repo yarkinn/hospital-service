@@ -1,10 +1,12 @@
 public class PhysicalTechnician extends Employee{
 
-    public PhysicalTechnician(int id,String name){
-        this.setName(name);
-        this.setId(id);
-        this.setWorkingHours(40);
-        this.setSalary(7000);
+    public PhysicalTechnician(int id,int salary,int workingHours,String name){
+        super(id, salary, workingHours, name);
+    }
+
+    @Override
+    public String getJob() {
+        return "pt";
     }
 }
 

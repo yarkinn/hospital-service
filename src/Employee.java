@@ -1,11 +1,21 @@
+import lombok.Data;
+
+@Data
 public abstract class Employee {
+
+
     private int id,salary,workingHours;
     private String name;
+    public Employee(int id, int salary, int workingHours, String name) {
+        this.id = id;
+        this.salary = salary;
+        this.workingHours = workingHours;
+        this.name = name;
+    }
+    public abstract String getJob();
     public int getId() {
         return id;
     }
-
-
     public void setId(int id) {
         this.id = id;
 
@@ -35,8 +45,5 @@ public abstract class Employee {
     public void setWorkingHours(int workingHours) {
         this.workingHours = workingHours;
     }
-
-
-
 
 }
