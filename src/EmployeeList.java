@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeList {
+    public static String[] typeOfJobs ={ "doctor","nurse","pct","pt", "sw"} ;
 
 
     private List<Employee> employees;
@@ -10,6 +11,19 @@ public class EmployeeList {
         this.employees = employeeList;
     }
 
+    public boolean jobExists(String job){
+        boolean jobExistent = false;
+        for(int i = 0; i < typeOfJobs.length; i++){
+            if(typeOfJobs[i].compareTo(job) == 0){
+                jobExistent = true;
+                break;
+
+            }
+        }
+        return jobExistent;
+
+
+    }
     public boolean employeeExists(int id){
         for (Employee i: employees) {
             if( i.getId() == id){
@@ -41,9 +55,6 @@ public class EmployeeList {
             else if(type.compareTo("sw") == 0){
                 employees.add( new SocialWorker(id,salary,workingHours,name));
 
-            }
-            else{
-                System.out.println( "Employee type doesn't exist");
             }
         }
     }

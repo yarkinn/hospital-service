@@ -1,6 +1,6 @@
-import lombok.Data;
+//import lombok.Data;
 
-@Data
+//@Data
 public abstract class Employee {
 
 
