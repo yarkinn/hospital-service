@@ -74,11 +74,18 @@ public class EmployeeList {
         }
     }
     public void listEmployees(){
-        for (Employee e:
-             employees) {
-            System.out.println( "Id: " + e.getId() +"\nName: " + e.getName() +"\nJob: " + e.getJob() + "\nSalary: " + e.getSalary() + "\nWorkingHours: " + e.getWorkingHours() );
-            System.out.println();
+        if( employees.size() == 0){
+            System.out.println("The list is empty.");
         }
+        else{
+            for (Employee e:
+                    employees) {
+                System.out.println( "Id: " + e.getId() +"\nName: " + e.getName() +"\nJob: " + e.getJob() + "\nSalary: " + e.getSalary() + "\nWorkingHours: " + e.getWorkingHours() );
+                System.out.println();
+            }
+
+        }
+
 
     }
 

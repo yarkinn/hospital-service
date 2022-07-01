@@ -13,6 +13,8 @@ public abstract class Employee {
         this.name = name;
     }
     public abstract String getJob();
+
+    //<editor-fold decs="getter setter">
     public int getId() {
         return id;
     }
@@ -20,7 +22,6 @@ public abstract class Employee {
         this.id = id;
 
     }
-
 
     public String getName() {
         return name;
@@ -37,13 +38,14 @@ public abstract class Employee {
         this.salary = salary;
 
     }
+
     public int getWorkingHours() {
         return workingHours;
     }
-
 
     public void setWorkingHours(int workingHours) {
         this.workingHours = workingHours;
     }
 
+    //</editor-fold>
 }

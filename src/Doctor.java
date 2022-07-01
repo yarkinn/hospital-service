@@ -1,3 +1,5 @@
+import Utils.Constanst;
+
 public class Doctor extends Employee{
 
 
@@ -7,7 +9,7 @@ public class Doctor extends Employee{
 
     @Override
     public String getJob() {
-        return "doctor";
+        return Constanst.DOCTOR;
     }
 
 

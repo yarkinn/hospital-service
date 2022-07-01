@@ -62,7 +62,7 @@ public class Main {
     
                     int workingHours = in.nextInt();
                     while( workingHours < 0  ){
-                        System.out.print("Working hours can't be negative,please enter a new salary: ");
+                        System.out.print("Working hours can't be negative,please enter a new working hour: ");
                         workingHours = in.nextInt();
                     }
                     employees.addEmployee(id,type,name,salary,workingHours);
