@@ -4,6 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    public static boolean hasDigits(String s){
+
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isDigit(s.charAt(i))){
+                return true;
+            }
+
+        }
+        return false;
+    }
     public static void main(String[] args) {
         EmployeeList employees = new EmployeeList(new ArrayList<>());
         System.out.println("Welcome to Hospital Employee Management System");
@@ -38,6 +48,10 @@ public class Main {
                     }
                     System.out.print("Name of employee: ");
                     String name = in.next();
+                    while( hasDigits(name)){
+                        System.out.print("Employee name can't include numbers. New name: ");
+                        name = in.next();
+                    }
                     System.out.print("Salary of employee: ");
                     int salary = in.nextInt();
                     while( salary < 0  ){
