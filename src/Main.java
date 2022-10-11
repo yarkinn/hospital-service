@@ -58,10 +58,10 @@ public class Main {
                         System.out.print("Salary can't be negative,please enter a new salary: ");
                         salary = in.nextInt();
                     }
-                    System.out.print("Working hour of employee: ");
+                    System.out.print("Weekly working hour of employee: ");
     
                     int workingHours = in.nextInt();
-                    while( workingHours < 0  ){
+                    while( workingHours < 40  ){
                         System.out.print("Working hours can't be negative,please enter a new working hour: ");
                         workingHours = in.nextInt();
                     }
